@@ -8,6 +8,7 @@ run flask
 Youtube video link:
 
 Website desctiption:
+
 Home page offers user option to register an account or sign into an existing account
 
 Sign in page links to the book search page, if their account is registered with the database
