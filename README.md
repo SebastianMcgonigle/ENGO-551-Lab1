@@ -5,7 +5,7 @@ Instructions to open website through gitbash:
 $ source ./flaskrunner.sh
 run flask
 
-Youtube video link:
+Youtube video link: https://youtu.be/T6E5uvgXNvo
 
 Website desctiption:
 
