@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+     
+{% block heading %}
+     
+{% endblock %}
+
+{% block body %}
+
+    <!-- Top Navigation -->
+    <div class="topnav">
+        <a href="{{ url_for('index') }}">Home/Register</a>
+        <a href="{{ url_for('search') }}">Search</a>
+        <a href="{{ url_for('login') }}">Log Out</a>
+    </div>
+
+        <!--Refresh page to search again-->
+        <h3>Refresh the page to search for another book!</h3>
+        <form action="{{ url_for('search') }}" method="GET">
+            <button class="btn">Refresh</button>
+        </form>
+
+    <h3>Your search returned {{numfound}} results!</h3>
+
+    <!--Search Results from database-->
+    <!--for every row of booksfound, display the info-->
+    <table style="width:100%;">
+        <tr>
+            <td>ISBN Number</td>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Year</td>
+        </tr>
+        {% for row in range(numfound) %}
+        <tr>
+            <td>
+                <form action = "{{ url_for('review') }}" method="GET">
+                    <button class="btn-isbn" name="isbn" value="{{booksfound[row][0]}}" >{{booksfound[row][0]}}</button>
+                </form>
+            </td>
+            <td>{{booksfound[row][1]}}</td>
+            <td>{{booksfound[row][2]}}</td>
+            <td>{{booksfound[row][3]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,108 @@
+*{
+    padding: 0.5%;
+    text-align:center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background-color: goldenrod;
+}
+
+.form-group{
+    text-align: center;
+}
+
+.head{
+    color: black;
+    text-align:center;
+}
+
+.btn{
+    border-color:black;
+    border-width:1px;
+}
+
+.form-input{
+    border-color:black;
+    border-width: 1Px;
+    text-align: center;
+}
+
+.topnav{
+    text-align: center;
+    background-color: black;
+}
+
+.topnav a{
+    color:goldenrod;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover{
+    color: white;
+}
+
+.divider{
+    background-color: black;
+}
+
+.btn-isbn{
+    text-decoration: underline;
+    width: 100%;
+    background-color: goldenrod;
+    border-color: goldenrod;
+    box-shadow: goldenrod;
+}
+
+.btn-isbn:hover{
+    text-decoration-color: white;
+    color: white;
+}
+
+.btn-isbn:active{
+    text-decoration-color: white;
+    color: white;
+}
+
+#review-text{
+    width: 100%;
+    text-align:left;
+}
+
+/*5-star rating bar*/
+.rater {
+    border: 1.5px solid black;
+    height: 46px;
+    padding: 0 10px;
+    align-content: center;
+}
+.rater:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rater:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rater:not(:checked) > label:before {
+    content: '★ ';
+}
+.rater > input:checked ~ label {
+    color: #ffc700;    
+}
+.rater:not(:checked) > label:hover,
+.rater:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rater > input:checked + label:hover,
+.rater > input:checked + label:hover ~ label,
+.rater > input:checked ~ label:hover,
+.rater > input:checked ~ label:hover ~ label,
+.rater > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+     
+{% block heading %}
+     
+{% endblock %}
+
+{% block body %}
+
+  <!-- Top Navigation -->
+  <div class="topnav">
+      <a href="{{ url_for('index') }}">Home/Register</a>
+  </div>
+
+{% if message=='1' %}
+<!--message=1 is from register to login page-->
+<h3>Account registered, now please sign in!</h3>
+{% elif message=='3' %}
+<!--message=3 is skip register to sign in -->
+<h3>Please sign in to your account!</h3>
+{% else %}
+<!--message=2 is loop from login back to login page-->
+<h3>Incorrect username or password, please sign in!</h3>  
+{% endif %}
+
+<form action="{{ url_for('search') }}" method="POST">
+  <input type="text" name="name" placeholder="Username">
+  <input type="password" name="password" placeholder="Password">
+  <button>Sign In</button>
+</form>
+
+{% endblock %}

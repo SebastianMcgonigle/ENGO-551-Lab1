@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+     
+{% block heading %}
+
+{% endblock %}
+
+{% block body %}
+
+    <!-- Top Navigation -->
+    <div class="topnav">
+      <a href="{{ url_for('index') }}">Home/Register</a>
+      <a href="{{ url_for('search') }}">Search</a>
+      <a href="{{ url_for('login') }}">Log Out</a>
+  </div>
+
+  <h3>Welcome {{ name }}, search for a book!</h3>
+
+  <!--Form for Book Search-->
+  <form action="{{ url_for('book') }}" methods="GET">
+
+    <div class="form-group">
+      <label >Search:</label>
+      <input type="text" name="searchtext" class="form-input">
+    </div>
+    
+    <div class="form-group">
+    <input type="radio" name="searchtype" value="title" required> Title<br>
+    <input type="radio" name="searchtype" value="author"> Author<br>
+    <input type="radio" name="searchtype" value="year"> Year<br>
+    <input type="radio" name="searchtype" value="isbn"> ISBN Number<br> 
+    </div>
+
+    <div class="form-group">
+    <button class="btn">Search</button>
+    </div>
+  </form>
+{% endblock %}
