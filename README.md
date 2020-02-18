@@ -1,16 +1,18 @@
 # -ENGO-551-Lab1
 ENGO 551 Lab1 Books: PostgreSQL database with Python and Flask
 
+Instructions to open website through gitbash:
 $ source ./flaskrunner.sh
+run flask
 
-4. Set enviroment variable flask_app to be application.py
-$ export FLASK_APP=application.py
-$ set FLASK_APP=application.py
+Youtube video link:
 
-6. run flask application:
-$ export FLASK_ENV=development
-$ export FLASK_APP=application.py
-$ export DATABASE_URL=postgres://tdzaqkmgbecwph:43f91bc31df914f1c62f944f6df0487b413bd736d06e2a3794cd13f945e4135a@ec2-3-220-86-239.compute-1.amazonaws.com:5432/d5fvamufm2k9o3
+Website desctiption:
+Home page offers user option to register an account or sign into an existing account
+Sign in page links to the book search page, if their account is registered with the database
+Search page a user types in their search query and selects the type of search eg. title, author, year, isbn
+Books page displays the search results and provides a link to each individual book on a review page
+Review page provides the number of reviews submitted, and the average rating out of 5 from goodreads.com
+Review page also accepts a review from the user with a written and ranking section
 
-
-goodreads api key: 1534yrlGntKmEvl4P5DlZg
+Thank you for checking out my website!
