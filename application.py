@@ -156,14 +156,3 @@ def review():
         rev =  db.execute(command).fetchall()
 
         return render_template("review.html", bookdata=bookdata, isbn=isbn, avgrate = avgrate, numrevs=numrevs, rev=rev, revcount=len(rev))
-
-        
-
-
-
-
-# #main
-# def main():
-
-# if __name__ == "__main__":
-#     main()
